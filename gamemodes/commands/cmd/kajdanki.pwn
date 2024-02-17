@@ -80,6 +80,11 @@ YCMD:kajdanki(playerid, params[], help)
                                 return 1;
                             }
 
+                            if(IsAPolicja(giveplayerid)){
+                                sendTipMessage(playerid, "Nie mozesz skuc policjanta!");
+                                return 1;
+                            }
+
                             new string[128];
                             if(PlayerInfo[giveplayerid][pBW] >= 1 || PlayerInfo[giveplayerid][pInjury] >= 1)
                             {
